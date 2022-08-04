@@ -3,11 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>LetsLearn!</title>
 </head>
 <body>
-<h1>Hello world!
+<div class="container">
+<h1>Hello!
 </h1>
+
+</div>
+<div class="container"><h2>Welcome to LetsLearn!</h2></div>
 </body>
 </html>
