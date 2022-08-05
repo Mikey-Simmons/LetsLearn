@@ -1,6 +1,6 @@
 package com.letslearn.models;
 
-import java.util.List;
+import java.util.Hashtable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,11 +21,14 @@ public class Student {
 	@Email(message="Must be a valid email")
 	private String email;
 	private int phoneNumber;
+	private String name;
+	
 	@Size(min=5,message="Password must be greater than 5 characters")
 	private String password;
-	private List<String> classes;
 	@Transient
     private String passwordConfirmation;
+	private Hashtable<ClassRoom,Integer> studentGrades;
+	
 	public String getPasswordConfirmation() {
 		return passwordConfirmation;
 	}
@@ -51,17 +54,24 @@ public class Student {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public List<String> getClasses() {
-		return classes;
-	}
-	public void setClasses(List<String> classes) {
-		this.classes = classes;
-	}
+	
 	public int getPhoneNumber() {
 		return phoneNumber;
 	}
 	public void setPhoneNumber(int phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Hashtable<ClassRoom,Integer> getStudentGrades() {
+		return studentGrades;
+	}
+	public void setStudentGrades(Hashtable<ClassRoom,Integer> studentGrades) {
+		this.studentGrades = studentGrades;
 	} 
 	
 }
