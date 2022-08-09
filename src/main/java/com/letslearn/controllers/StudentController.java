@@ -26,6 +26,10 @@ public class StudentController {
 public String index() {
 	return "index.jsp";
 }
+@RequestMapping("/home")
+public String home() {
+	return "home.jsp";
+}
 @RequestMapping(value="/login", method=RequestMethod.POST)
 public String loginStudent(@RequestParam("email") String email, @RequestParam("password") String password, Model model, HttpSession session) {
 	boolean isAuthenticated = studentService.authenticateStudent(email, password);

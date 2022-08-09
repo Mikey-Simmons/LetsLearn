@@ -17,7 +17,7 @@ public class LetsLearnApplication {
 		bob.setPassword("12345678");
 		bob.setPhoneNumber("2060001234");
 		bob.setPasswordConfirmation("12345678");
-		
+		System.out.println(bob.getName());
 		
 	}
 
