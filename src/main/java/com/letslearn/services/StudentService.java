@@ -3,6 +3,7 @@ package com.letslearn.services;
 import java.util.Optional;
 
 import org.mindrot.jbcrypt.BCrypt;
+
 import org.springframework.stereotype.Service;
 
 import com.letslearn.models.Student;
@@ -10,7 +11,9 @@ import com.letslearn.repositories.StudentRepository;
 
 @Service
 public class StudentService {
+	
 	private final StudentRepository studentRepository;
+	
 	public StudentService(StudentRepository studentRepository) {
 		this.studentRepository = studentRepository;
 	}

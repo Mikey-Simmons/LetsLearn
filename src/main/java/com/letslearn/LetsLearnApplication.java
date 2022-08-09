@@ -11,6 +11,14 @@ public class LetsLearnApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LetsLearnApplication.class, args);
 		
+		Student bob = new Student();
+		bob.setEmail("bob@email.com");
+		bob.setName("bob");
+		bob.setPassword("12345678");
+		bob.setPhoneNumber("2060001234");
+		bob.setPasswordConfirmation("12345678");
+		
+		
 	}
 
 }

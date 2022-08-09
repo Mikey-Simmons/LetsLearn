@@ -12,15 +12,16 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 
 
-
+@Entity
+@Table(name="students")
 public class Student {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	@Email(message="Must be a valid email")
 	private String email;
-	private int phoneNumber;
+	private String phoneNumber;
 	private String name;
 	
 	@Size(min=5,message="Password must be greater than 5 characters")
@@ -36,10 +37,10 @@ public class Student {
 		this.passwordConfirmation = passwordConfirmation;
 	}
 	//Getters and Setters
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getEmail() {
@@ -55,10 +56,10 @@ public class Student {
 		this.password = password;
 	}
 	
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	public String getName() {

@@ -14,5 +14,21 @@
 
 </div>
 <div class="container"><h2>Welcome to LetsLearn!</h2></div>
+ <form class="login" method="post" action="/login">
+        <div class="mb-3 row">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" id="email" name="email"/>
+        </div>
+        <div class="mb-3 row">
+        
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" name="password"/>
+            </div>
+        
+        <button class="btn btn-success" type="submit">Log In!
+        </button>
+        
+        
+    </form>
 </body>
 </html>
